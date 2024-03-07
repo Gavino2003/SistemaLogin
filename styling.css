@@ -1,11 +1,14 @@
 
   body {
     background-image: url('./Fundo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
 .conteudo {
-    width: 80%;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -16,8 +19,23 @@
 
 #titulosite{
     color: white;
+    margin-bottom: 30px;
 }
-
+.caixa{
+    background-color: rgba(0, 0, 0, 0.747);
+    padding: 100px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 50px;
+    
+}
+#logotipo{
+    width: 100px;
+    height: auto;
+}
+#esqueci{
+    color: lightgrey;
+    font-size: small;
+}
 
 .botoesprincipais {
   background-color: transparent;
@@ -25,21 +43,43 @@
   border: 2px solid white;
   border-radius: 30px;
   padding: 15px 32px;
-  font-size: 24px;
+  margin: 10px;
+  font-size: 15px;
   text-decoration: none;
   cursor: pointer;
-  transition: ease-in-out 0.25s;
+  width: 200px;
+  transition: all 0.5s;
 }
 
-.botoesprincipais:hover{
-    background-color: white;
-    color: black;
-    border: 3px solid black;
-}
+.botoesprincipais span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .botoesprincipais span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .botoesprincipais:hover span {
+    padding-right: 25px;
+  }
+  
+  .botoesprincipais:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
 footer{
-    justify-content: center;
-    align-items: center;
     color: white;
-    font-size: medium;
+    font-size: small;
+    background-color: rgba(0, 0, 0, 0.747);
+    padding: 2px;
+    text-align: center;
 }
