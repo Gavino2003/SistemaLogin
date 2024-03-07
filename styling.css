@@ -1,0 +1,45 @@
+
+  body {
+    background-image: url('./Fundo.jpg');
+    margin: 0;
+    padding: 0;
+}
+.conteudo {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#titulosite{
+    color: white;
+}
+
+
+.botoesprincipais {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 15px 32px;
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: ease-in-out 0.25s;
+}
+
+.botoesprincipais:hover{
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+}
+
+footer{
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: medium;
+}
