@@ -48,13 +48,37 @@
 #logotipo{
     width: 100px;
     height: auto;
+    margin-bottom: 30px;
 }
 #esqueci{
     color: lightgrey;
-    font-size: medium;
+    font-size: 15px;
+    text-decoration: none;
 }
 
-.botoesprincipais {
+#esqueci:hover {
+    color: rgb(177, 177, 177);
+  }
+.logininputs{
+  width: 300px;
+  background-color: transparent;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all .5s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  
+}
+
+.botao {
   background-color: transparent;
   color: white;
   border: 2px solid white;
@@ -67,15 +91,32 @@
   width: 200px;
   transition: all 0.5s;
 }
+.btnrecuperar {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 15px 32px;
+  margin: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 300px;
+  transition: all 0.2s;
+}
 
-.botoesprincipais span {
+.btnrecuperar:hover{
+  color: rgb(97, 97, 97);
+  border: 2px solid rgb(97, 97, 97);
+}
+.botao span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  .botoesprincipais span:after {
+  .botao span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -84,11 +125,11 @@
     transition: 0.5s;
   }
   
-  .botoesprincipais:hover span {
+  .botao:hover span {
     padding-right: 25px;
   }
   
-  .botoesprincipais:hover span:after {
+  .botao:hover span:after {
     opacity: 1;
     right: 0;
   }
