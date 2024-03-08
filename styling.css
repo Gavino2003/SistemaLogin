@@ -22,11 +22,28 @@
     margin-bottom: 30px;
 }
 .caixa{
-    background-color: rgba(0, 0, 0, 0.747);
-    padding: 100px;
+    border: 0px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(5px);
+    padding: 100px;
     margin: 50px;
-    
+}
+.caixalogin{
+  border: 0px solid rgba(255, 255, 255, .2);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  background-color: rgba(0, 0, 0, .4);
+  backdrop-filter: blur(5px);
+  padding: 100px;
+  margin: 50px;
+  
+}
+.textoinputs{
+  color: white;
+  font-size: medium;
 }
 #logotipo{
     width: 100px;
@@ -34,7 +51,7 @@
 }
 #esqueci{
     color: lightgrey;
-    font-size: small;
+    font-size: medium;
 }
 
 .botoesprincipais {
@@ -79,7 +96,9 @@
 footer{
     color: white;
     font-size: small;
-    background-color: rgba(0, 0, 0, 0.747);
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(20px);
+    border: 2px rgba(0, 0, 0, 0.2);
     padding: 2px;
     text-align: center;
 }
