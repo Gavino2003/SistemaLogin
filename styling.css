@@ -28,18 +28,16 @@
     background-color: rgba(0, 0, 0, .4);
     backdrop-filter: blur(5px);
     padding: 100px;
-    margin: 50px;
+    
 }
 .caixalogin{
   border: 0px solid rgba(255, 255, 255, .2);
   border-radius: 10px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   background-color: rgba(0, 0, 0, .4);
   backdrop-filter: blur(5px);
   padding: 100px;
   margin: 50px;
-  
 }
 .textoinputs{
   color: white;
@@ -140,6 +138,25 @@ footer{
     background-color: rgba(0, 0, 0, .3);
     backdrop-filter: blur(20px);
     border: 2px rgba(0, 0, 0, 0.2);
-    padding: 2px;
+    padding-top: 5px;
     text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+  .caixalogin{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .conteudo {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
 }
