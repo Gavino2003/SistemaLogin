@@ -144,13 +144,13 @@ footer {
   padding: 4px;
 }
 .caixacheckbox {
-  display: block;
+  display: inline-block;
   position: relative;
   padding-left: 35px;
   cursor: pointer;
   font-size: 20px;
   color: white;
-
+  margin-bottom: 10px;
 }
 
 /* Esconder a checkbox que o browser tem por default */
@@ -222,7 +222,15 @@ footer {
     height: 100%;
     width: 100%;
     margin: 0px;
+    flex-direction: column;
   }
+
+  #esqueci {
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+  }
+  
   .conteudo{
     width: 100%;
   
@@ -239,6 +247,8 @@ footer {
 }
 
 .caixacheckbox{
-  padding-left: 0px;
+  margin-bottom: 10px;
+  font-size: 15px;
 }
+
 }
