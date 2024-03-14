@@ -1,33 +1,29 @@
-
-  body {
-    background-image: url('./Fundo.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
+body {
+  background-image: url('./Fundo.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .conteudo {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
-
 #titulosite{
-    color: white;
-    margin-bottom: 30px;
+  color: white;
+  margin-bottom: 30px;
 }
 .caixa{
-    border: 0px solid rgba(255, 255, 255, .2);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgba(0, 0, 0, .4);
-    backdrop-filter: blur(5px);
-    padding: 100px;
-    
+  border: 0px solid rgba(255, 255, 255, .2);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, .4);
+  backdrop-filter: blur(5px);
+  padding: 100px;
 }
 .caixalogin{
   border: 0px solid rgba(255, 255, 255, .2);
@@ -43,19 +39,18 @@
   font-size: medium;
 }
 #logotipo{
-    width: 130px;
-    height: auto;
-    margin-bottom: 30px;
+  width: 130px;
+  height: auto;
+  margin-bottom: 30px;
 }
 #esqueci{
-    color: lightgrey;
-    font-size: 15px;
-    text-decoration: none;
+  color: lightgrey;
+  font-size: 15px;
+  text-decoration: none;
 }
-
 #esqueci:hover {
-    color: rgb(177, 177, 177);
-  }
+  color: rgb(177, 177, 177);
+}
 .logininputs{
   width: 300px;
   background-color: transparent;
@@ -72,9 +67,7 @@
   font-weight: 500;
   transition: all .5s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  
 }
-
 .botao {
   background-color: transparent;
   color: white;
@@ -101,37 +94,31 @@
   width: 300px;
   transition: all 0.2s;
 }
-
 .btnrecuperar:hover{
   color: rgb(97, 97, 97);
   border: 2px solid rgb(97, 97, 97);
 }
 .botao span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .botao span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .botao:hover span {
-    padding-right: 25px;
-  }
-  
-  .botao:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.botao span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.botao:hover span {
+  padding-right: 25px;
+}
+.botao:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 footer {
   position: fixed;
   left: 0;
@@ -152,7 +139,6 @@ footer {
   color: white;
   margin-bottom: 10px;
 }
-
 /* Esconder a checkbox que o browser tem por default */
 .caixacheckbox input {
   position: absolute;
@@ -161,7 +147,6 @@ footer {
   height: 0;
   width: 0;
 }
-
 /* Criar a checkbox customizada */
 .checkmark {
   position: absolute;
@@ -173,29 +158,24 @@ footer {
   border: 2px solid white;
   border-radius: 5px;
 }
-
 /* O que fazer ao passar o rato em cima */
 .caixacheckbox:hover input ~ .checkmark {
   background-color: #050505;
 }
-
 /* Quando clicada modificar o fundo*/
 .caixacheckbox input:checked ~ .checkmark {
   background-color: #000000;
 }
-
 /* Criar o checkmark*/
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
 /* Mostar o chekmark*/
 .caixacheckbox input:checked ~ .checkmark:after {
   display: block;
 }
-
 /* Customizar o checkmark*/
 .caixacheckbox .checkmark:after {
   left: 6px;
@@ -208,47 +188,38 @@ footer {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
 @media (max-width: 800px) {
   html, body {
-    overflow-x: hidden;
-    }
- 
+      overflow-x: hidden;
+ }
   .caixa{
-    height: 100%;
-    width: 100%;
-  }
+      height: 100%;
+      width: 100%;
+ }
   .caixalogin{
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    flex-direction: column;
-  }
-
+      height: 100%;
+      width: 100%;
+      margin: 0px;
+      flex-direction: column;
+ }
   #esqueci {
-    margin-top: 10px;
-    text-align: center;
-    display: block;
-  }
-  
+      margin-top: 10px;
+      text-align: center;
+      display: block;
+ }
   .conteudo{
-    width: 100%;
-  
-  }
- 
+      width: 100%;
+ }
   body{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-  }
-#logotipo{
-  padding-top: 15vw;
-  
-}
-
-.caixacheckbox{
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+ }
+  #logotipo{
+      padding-top: 15vw;
+ }
+  .caixacheckbox{
+      margin-bottom: 10px;
+      font-size: 15px;
+ }
 }
