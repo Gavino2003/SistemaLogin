@@ -1,10 +1,10 @@
 body {
-  background-image: url('./Fundo.jpg');
+  background-image: url('../assets/images/background.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.conteudo {
+.content {
   width: 100%;
   text-align: center;
   display: flex;
@@ -13,11 +13,11 @@ body {
   height: 100vh;
   flex-direction: column;
 }
-#titulosite{
+#webtittle{
   color: white;
   margin-bottom: 30px;
 }
-.caixa{
+.box{
   border: 0px solid rgba(255, 255, 255, .2);
   border-radius: 10px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -25,7 +25,7 @@ body {
   backdrop-filter: blur(5px);
   padding: 100px;
 }
-.caixalogin{
+.box2{
   border: 0px solid rgba(255, 255, 255, .2);
   border-radius: 10px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -34,21 +34,17 @@ body {
   padding: 100px;
   margin: 50px;
 }
-.textoinputs{
-  color: white;
-  font-size: medium;
-}
-#logotipo{
+#logo{
   width: 130px;
   height: auto;
   margin-bottom: 30px;
 }
-#esqueci{
+#forgotpasword{
   color: lightgrey;
   font-size: 15px;
   text-decoration: none;
 }
-#esqueci:hover {
+#forgotpasword:hover {
   color: rgb(177, 177, 177);
 }
 .logininputs{
@@ -68,7 +64,7 @@ body {
   transition: all .5s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
-.botao {
+.buttons {
   background-color: transparent;
   color: white;
   border: 2px solid white;
@@ -98,13 +94,13 @@ body {
   color: rgb(97, 97, 97);
   border: 2px solid rgb(97, 97, 97);
 }
-.botao span {
+.buttons span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-.botao span:after {
+.buttons span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -112,10 +108,10 @@ body {
   right: -20px;
   transition: 0.5s;
 }
-.botao:hover span {
+.buttons:hover span {
   padding-right: 25px;
 }
-.botao:hover span:after {
+.buttons:hover span:after {
   opacity: 1;
   right: 0;
 }
@@ -130,7 +126,7 @@ footer {
   text-align: center;
   padding: 4px;
 }
-.caixacheckbox {
+.boxcheckbox {
   display: inline-block;
   position: relative;
   padding-left: 35px;
@@ -140,7 +136,7 @@ footer {
   margin-bottom: 10px;
 }
 /* Esconder a checkbox que o browser tem por default */
-.caixacheckbox input {
+.boxcheckbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -159,11 +155,11 @@ footer {
   border-radius: 5px;
 }
 /* O que fazer ao passar o rato em cima */
-.caixacheckbox:hover input ~ .checkmark {
+.boxcheckbox:hover input ~ .checkmark {
   background-color: #050505;
 }
 /* Quando clicada modificar o fundo*/
-.caixacheckbox input:checked ~ .checkmark {
+.boxcheckbox input:checked ~ .checkmark {
   background-color: #000000;
 }
 /* Criar o checkmark*/
@@ -173,11 +169,11 @@ footer {
   display: none;
 }
 /* Mostar o chekmark*/
-.caixacheckbox input:checked ~ .checkmark:after {
+.boxcheckbox input:checked ~ .checkmark:after {
   display: block;
 }
 /* Customizar o checkmark*/
-.caixacheckbox .checkmark:after {
+.boxcheckbox .checkmark:after {
   left: 6px;
   top: 2px;
   width: 5px;
@@ -192,22 +188,22 @@ footer {
   html, body {
       overflow-x: hidden;
  }
-  .caixa{
+  .box{
       height: 100%;
       width: 100%;
  }
-  .caixalogin{
+  .box2{
       height: 100%;
       width: 100%;
       margin: 0px;
       flex-direction: column;
  }
-  #esqueci {
+  #forgotpasword {
       margin-top: 10px;
       text-align: center;
       display: block;
  }
-  .conteudo{
+  .content{
       width: 100%;
  }
   body{
@@ -215,10 +211,10 @@ footer {
       height: 100%;
       margin: 0px;
  }
-  #logotipo{
+  #logo{
       padding-top: 15vw;
  }
-  .caixacheckbox{
+  .boxcheckbox{
       margin-bottom: 10px;
       font-size: 15px;
  }
