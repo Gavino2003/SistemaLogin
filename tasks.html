@@ -12,14 +12,15 @@
     <div class="createtask">
         <button onclick="createtaskclose()" class="closebutton">X</button>
         <h1 id="newtasktext">Nova Tarefa</h1>
-        <h2 class="smallertext">Descrição</h2>
-        <input id="description">
-        <h2 class="smallertext">Data</h2>
-        <input id="date">
+        <form id="taskForm">
+            <h2 class="smallertext">Descrição</h2>
+            <input id="description" name="description">
+            <h2 class="smallertext">Data</h2>
+            <input id="date" name="date">
+            <br>
+            <button type="submit" class="buttons" id="buttoncreatetask"><span>Criar Tarefa</span></button>
+        </form>
         <br>
-        <a href="./login.html">
-            <button class="buttons" role="button" id="buttoncreatetask"><span>Criar Tarefa</span></button>
-        </a>
     </div>
     <div class="contenttasks">
         <div class="box2">
@@ -46,23 +47,14 @@
                 <br>
                 <table id="tables_tasks">
                     <thead>
-                        <tr id="cell_highlight">
-                            <th>Tarefa</th>
-                            <th>Data</th>
-                            <th>Estado</th>
-                        </tr>
+                    <tr id="cell_highlight">
+                        <th>Tarefa</th>
+                        <th>Data</th>
+                        <th>Estado</th>
+                    </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th>Fazer o Lab1 de PW</th>
-                            <th>14-03-2024</th>
-                            <th><input type="checkbox"></th>
-                        </tr>                    
-                        <tr>
-                            <th>Fazer o Lab2 de PW</th>
-                            <th>27-03-2024</th>
-                            <th><input type="checkbox"></th>
-                        </tr>
+                    <tbody id="taskTableBody">
+                    <!-- Table body will be populated by JavaScript -->
                     </tbody>
                 </table>
             </div>
