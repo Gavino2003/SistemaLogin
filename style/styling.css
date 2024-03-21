@@ -13,15 +13,36 @@ body {
   height: 100vh;
   flex-direction: column;
 }
+.contenttasks{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo{
+  margin-bottom: 12rem;
+}
+#sessionconfig{
+  right: 10px;
+  top: 15px;
+  position: absolute;
+}
 #webtittle {
   color: white;
   margin-bottom: 30px;
 }
+
+#usernametext{
+  color: white;
+  font-size: 3rem;
+  position: relative;
+  top: 70px;
+}
 .box {
   border: 0px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
   padding: 100px;
@@ -33,13 +54,19 @@ body {
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
-  padding: 100px;
-  margin: 50px;
+  padding: 50px;
+  margin: 20px;
 }
 #logo {
   width: 130px;
   height: auto;
   margin-bottom: 30px;
+}
+#profilepicture{
+  width: 200px;
+  height: auto;
+  float: left;
+  margin-right: 30px;
 }
 #forgotpasword {
   color: lightgrey;
@@ -73,11 +100,48 @@ body {
   border-radius: 30px;
   padding: 15px 32px;
   margin: 10px;
-  font-size: 15px;
   text-decoration: none;
   cursor: pointer;
-  width: 200px;
   transition: all 0.5s;
+}
+.buttonsid {
+  width: 200px;
+  font-size: 15px;
+}
+.buttonsession{
+  width: 300px;
+  font-size: 20px;
+}
+#buttontask{
+  width: 200px;
+  font: 20px;
+  float: right;
+}
+#mytasks{
+  color: white;
+  font-size: 30px;
+  float: left;
+}
+th, td {
+  border:1px solid black;
+  background-color: rgb(240, 240, 240);
+  padding: 8px;
+}
+table{
+  border-collapse: collapse;
+}
+thead th {
+  width: 80%;
+}
+#tables_tasks{
+  margin-top: 5rem;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+#cell_highlight{
+  font-style: bold;
+  font-size: 25px;
 }
 .btnrecuperar {
   background-color: transparent;
