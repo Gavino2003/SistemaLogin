@@ -1,87 +1,62 @@
-const createtaskmenu = document.querySelector(".createtask")
-
-function createtaskopen(){
+const createtaskmenu = document.querySelector(".createtask");
+const edittaskmenu = document.querySelector(".edittask")
+function createtaskopen() {
     createtaskmenu.style.display = 'block';
 }
 
-function createtaskclose(){
+function createtaskclose() {
     createtaskmenu.style.display = 'none';
 }
-
+function edittaskopen(){
+    edittaskmenu.style.display = 'block';
+}
+function edittaskclose(){
+    edittaskmenu.style.display = 'none';
+}
 document.addEventListener('DOMContentLoaded', function () {
-    var tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    var tableBody = document.getElementById('taskTableBody');
-
-    tasks.forEach(function (task) {
-        var newRow = tableBody.insertRow();
-        newRow.innerHTML = `
-            <td>${task.description}</td>
-            <td>${task.date}</td>
-            <td><input type="checkbox" ${task.completed ? 'checked' : ''}></td>
-        `;
-    });
+    loadTasksFromPage();
 });
 
-    // Load tasks from localStorage when the page loads
-    document.addEventListener('DOMContentLoaded', function () {
-        var tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-        var tableBody = document.getElementById('taskTableBody');
+document.getElementById('taskForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
 
-        tasks.forEach(function (task) {
-            addTaskToTable(task);
-        });
-    });
-
-    document.getElementById('taskForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Get form values
-        var description = document.getElementById('description').value;
-        var date = document.getElementById('date').value;
-
-        // Create a new task object
-        var newTask = { description: description, date: date, completed: false };
-
-        // Add the task to the table and save it
-        addTaskToTable(newTask);
-        saveTasksToLocalStorage();
-    });
-
-    function addTaskToTable(task) {
-        var tableBody = document.getElementById('taskTableBody');
-        var newRow = tableBody.insertRow();
-        newRow.innerHTML = `
-            <td>${task.description}</td>
-            <td>${task.date}</td>
-            <td><input type="checkbox" ${task.completed ? 'checked' : ''} onclick="completeTask(this, ${tableBody.rows.length - 1})"></td>
-        `;
+    var tableRows = document.getElementById('taskTableBody').getElementsByTagName('tr');
+    if (tableRows.length >= 4) {
+        document.getElementById('taskLimitMessage').style.display = 'block';
+        return;
     }
 
-    function completeTask(checkbox, rowIndex) {
-        var tableRow = checkbox.parentNode.parentNode;
+    var description = document.getElementById('description').value;
+    var date = document.getElementById('date').value;
+    addTaskToTable(description, date);
 
-        // Add fade out animation to the row
-        tableRow.classList.add('fadeOut');
+    // Limpa os campos do formulário
+    document.getElementById('description').value = '';
+    document.getElementById('date').value = '';
 
-        // Remove the task from localStorage after the animation finishes
-        setTimeout(function () {
-            tableRow.remove();
-            saveTasksToLocalStorage();
-        }, 500);
+    if (tableRows.length >= 5) {
+        document.getElementById('createTaskButton').classList.add('disabled');
     }
+});
 
-    function saveTasksToLocalStorage() {
-        var tasks = [];
-        var tableBody = document.getElementById('taskTableBody');
+function addTaskToTable(description, date) {
+    var tableBody = document.getElementById('taskTableBody');
+    var newRow = tableBody.insertRow();
+    newRow.innerHTML = `
+        <td>${description}</td>
+        <td>${date}</td>
+        <td><input type="checkbox" onclick="completeTask(this)"></td>
+        <td><button onclick="edittaskopen()"><i class='fas fa-edit'></i></button></td>
+    `;
+}
 
-        for (var i = 0; i < tableBody.rows.length; i++) {
-            var row = tableBody.rows[i];
-            tasks.push({
-                description: row.cells[0].textContent,
-                date: row.cells[1].textContent,
-                completed: row.cells[2].querySelector('input[type="checkbox"]').checked
-            });
-        }
+function completeTask(checkbox) {
+    var tableRow = checkbox.parentNode.parentNode;
+    tableRow.remove();
+    document.getElementById('createTaskButton').classList.remove('disabled');
+    document.getElementById('taskLimitMessage').style.display = 'none';
+}
 
-        localStorage.setItem('tasks', JSON.stringify(tasks));
-    }
+function loadTasksFromPage() {
+    // No localStorage needed for this implementation
+}
