@@ -15,9 +15,9 @@
         <h1 id="newtasktext">Nova Tarefa</h1>
         <form id="taskForm">
             <h2 class="smallertext">Descrição</h2>
-            <input type="text" id="description" placeholder="Description" required>
+            <input type="text" class="inputdescription" id="description" placeholder="Descrição" required>
             <h2 class="smallertext">Data</h2>
-            <input type="date" id="date" required>
+            <input type="date" class="inputdate" id="date" required>
             <br>
             <button class="buttons" id="createTaskButton"><span>Criar Tarefa</span></button>
             <span id="taskLimitMessage">Limite de Tarefas por concluir atingido!</span>
@@ -27,11 +27,11 @@
     <div class="edittask">
         <button onclick="edittaskclose()" class="closebutton">X</button>
         <h1 id="newtasktext">Editar Tarefa</h1>
-        <form id="taskForm">
+        <form id="editTaskForm">
             <h2 class="smallertext">Descrição</h2>
-            <input type="text" id="description" placeholder="Description" required>
+            <input type="text" class="inputdescription" id="editDescription" placeholder="Descrição" required>
             <h2 class="smallertext">Data</h2>
-            <input type="date" id="date" required>
+            <input type="date" class="inputdate" id="editDate" required>
             <br>
             <button class="buttons" id="editTaskButton"><span>Submeter Alterações</span></button>
         </form>
@@ -40,10 +40,10 @@
     <div class="contenttasks">
         <div class="box2">
             <div id="sessionconfig">
-                <a href="./login.html">
+                <a href="./editprofile.html">
                     <button class="buttons" role="button" id="buttonsession"><span>Gerir Perfil</span></button>
                 </a>
-                <a href="./login.html">
+                <a href="./index.html">
                     <button class="buttons" role="button" id="buttonsession"><span>Terminar Sessão</span></button>
                 </a>
             </div>
@@ -67,7 +67,7 @@
                         <th>Editar</th>
                     </tr>
                     </thead>
-                    <tbody align="center" id="taskTableBody">
+                    <tbody id="taskTableBody">
                     <!-- Table body will be populated by JavaScript -->
                     </tbody>
                 </table>

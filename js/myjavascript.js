@@ -1,5 +1,7 @@
 const createtaskmenu = document.querySelector(".createtask");
-const edittaskmenu = document.querySelector(".edittask")
+const edittaskmenu = document.querySelector(".edittask");
+let editedRow = null;
+
 function createtaskopen() {
     createtaskmenu.style.display = 'block';
 }
@@ -7,18 +9,26 @@ function createtaskopen() {
 function createtaskclose() {
     createtaskmenu.style.display = 'none';
 }
-function edittaskopen(){
-    edittaskmenu.style.display = 'block';
+
+function edittaskopen(button) {
+    editedRow = button.parentNode.parentNode;
+    const columns = editedRow.getElementsByTagName('td');
+    const descriptionInput = document.getElementById('editDescription');
+    const dateInput = document.getElementById('editDate');
+
+    if (descriptionInput && dateInput) {
+        descriptionInput.value = columns[0].innerText;
+        dateInput.value = columns[1].innerText;
+        edittaskmenu.style.display = 'block';
+    }
 }
-function edittaskclose(){
+
+function edittaskclose() {
     edittaskmenu.style.display = 'none';
 }
-document.addEventListener('DOMContentLoaded', function () {
-    loadTasksFromPage();
-});
 
 document.getElementById('taskForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); 
 
     var tableRows = document.getElementById('taskTableBody').getElementsByTagName('tr');
     if (tableRows.length >= 4) {
@@ -28,14 +38,29 @@ document.getElementById('taskForm').addEventListener('submit', function (event) 
 
     var description = document.getElementById('description').value;
     var date = document.getElementById('date').value;
+
     addTaskToTable(description, date);
 
-    // Limpa os campos do formulário
     document.getElementById('description').value = '';
     document.getElementById('date').value = '';
 
     if (tableRows.length >= 5) {
         document.getElementById('createTaskButton').classList.add('disabled');
+    }
+});
+
+document.getElementById('editTaskForm').addEventListener('submit', function (event) {
+    event.preventDefault(); 
+
+    var description = document.getElementById('editDescription').value;
+    var date = document.getElementById('editDate').value;
+
+    if (editedRow !== null) { 
+        const columns = editedRow.getElementsByTagName('td');
+        columns[0].innerText = description;
+        columns[1].innerText = date;
+        editedRow = null;
+        edittaskmenu.style.display = 'none';
     }
 });
 
@@ -46,7 +71,7 @@ function addTaskToTable(description, date) {
         <td>${description}</td>
         <td>${date}</td>
         <td><input type="checkbox" onclick="completeTask(this)"></td>
-        <td><button onclick="edittaskopen()"><i class='fas fa-edit'></i></button></td>
+        <td><button onclick="edittaskopen(this)"><i class='fas fa-edit'></i></button></td>
     `;
 }
 
@@ -55,8 +80,4 @@ function completeTask(checkbox) {
     tableRow.remove();
     document.getElementById('createTaskButton').classList.remove('disabled');
     document.getElementById('taskLimitMessage').style.display = 'none';
-}
-
-function loadTasksFromPage() {
-    // No localStorage needed for this implementation
 }

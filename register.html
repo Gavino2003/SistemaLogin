@@ -14,40 +14,44 @@
             <img src="./assets/images/Logo.png" id="logo"/>
         </a>
         <br/>
-        <input class="logininputs" placeholder="* Nome" />
-        <br/>
-        <input
-          class="logininputs"
-          placeholder="* Email"
-          type="email"
-          minlength="8"
-        />
-        <br/>
-        <input
-          class="logininputs"
-          placeholder="* Password"
-          type="password"
-          minlength="8"
-        />
-        <br/>
-        <input
-          class="logininputs"
-          placeholder="* Confirme a Password"
-          type="password"
-          minlength="8"
-        />
-        <br/>
-        <label class="boxcheckbox"
-          >Li e aceito os termos de utilização e privacidade
-          <input type="checkbox" />
-          <span class="checkmark"></span>
-        </label>
-        <br/>
-        <a href="./register.html">
-            <button class="buttons" id="login" role="button">
-            <span>Registrar</span>
-            </button>
-        </a>
+        <form>
+          <input class="logininputs" placeholder="* Nome" required/>
+          <br/>
+          <input
+            class="logininputs"
+            placeholder="* Email"
+            type="email"
+            required
+          />
+          <br/>
+          <input
+            class="logininputs"
+            placeholder="* Password"
+            type="password"
+            minlength="8"
+            required
+          />
+          <br/>
+          <input
+            class="logininputs"
+            placeholder="* Confirme a Password"
+            type="password"
+            minlength="8"
+            required
+          />
+          <br/>
+          <label class="boxcheckbox"
+            >Li e aceito os termos de utilização e privacidade
+            <input type="checkbox" required/>
+            <span class="checkmark"></span>
+          </label>
+          <br/>
+          <a href="./register.html">
+              <button class="buttons" id="login" role="button">
+              <span>Registrar</span>
+              </button>
+          </a>
+      </form>
       </div>
     </div>
     <footer>© 2024 Vasco Gavino. All rights reserved.</footer>
