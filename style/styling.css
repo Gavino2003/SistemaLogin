@@ -20,7 +20,7 @@ a{
 input:required:focus:valid {
   background: url("../assets/images/valid.png");
   background-repeat: no-repeat;
-  background-position: 95% 50%;
+  background-position: 88% 50%;
   background-size: 25px;
   background-color: rgba(0, 255, 0, .2);
   border-color: green;
@@ -29,7 +29,7 @@ input:focus:invalid {
   border-color: red;
   background: url("../assets/images/invalid.png");
   background-repeat: no-repeat;
-  background-position: 95% 50%;
+  background-position: 88% 50%;
   background-size: 25px;
   background-color: rgba(255, 0, 0, .2);
   background-size: 25px;
@@ -61,7 +61,10 @@ input:focus:invalid {
   display: none;
   font-size: 20px;
 }
-
+::-webkit-calendar-picker-indicator{
+  font-size: 20px;
+  margin-right: 5px;
+}
 .box {
   border: 0px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
@@ -261,27 +264,7 @@ input:focus:invalid {
   display: none;
   text-align: center;
 }
-th, td {
-  border:1px solid black;
-  background-color: rgb(240, 240, 240);
-  padding: 8px;
-}
-table{
-  border-collapse: collapse;
-}
-thead th {
-  width: 80%;
-}
-#tables_tasks{
-  margin-top: 5rem;
-  width: 100%;
-  padding: 10px;
-  font-size: 20px;
-}
-#cell_highlight{
-  font-style: bold;
-  font-size: 25px;
-}
+
 .btnrecuperar {
   background-color: transparent;
   color: white;
@@ -390,10 +373,127 @@ footer {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+th, td {
+  border:1px solid black;
+  background-color: rgb(240, 240, 240);
+  padding: 8px;
+}
+table{
+  border-collapse: collapse;
+}
+thead th {
+  width: 80%;
+}
+#tables_tasks{
+  margin-top: 5rem;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+#cell_highlight{
+  font-style: bold;
+  font-size: 25px;
+}
+
+
+
+
 @media (max-width: 800px) {
+ 
+  #sessionconfig {
+    position: absolute;
+    top: 18rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+  }
+  #createtaskdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centralizar verticalmente */
+    align-items: center; /* Centralizar horizontalmente */
+    margin-top: 100px;
+    text-align: center;
+  }
+  /* Styling for user image */
+  #profilepicture {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+
+  }
+  .table-container {
+    display: flex;
+    justify-content: center;
+  }
+  /* Styling for username text */
+  #usernametext {
+    display: none;
+  }
+  #handicon{
+    display: none;
+  }
+
+  #mytasks {
+    font-size: 3rem; /* Tamanho de fonte aumentado */
+    margin: 10px;
+  }
+  
+  #buttontask {
+    margin-top: 15px; /* Ajustar o espaçamento entre o texto e o botão */
+  }
+  table {
+    width: 100%;
+  }
+  table thead tr{
+    display: none;
+  }
+  table tr{
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  table th, table td{
+    padding: .5em;
+  }
+
+  table td{
+    width: 80%;
+    margin: 0;
+    display: block;
+    text-align: right;
+    font-size: 1em;
+    border: 3px solid black;
+  }
+
+  table td:before{
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    font-size: 20px;
+    float: left;
+  }
+ #tables_tasks {
+  margin: 5rem auto; /* Margem superior de 5rem e margens laterais automáticas para centralizar */
+  width: 80%; /* Largura da tabela */
+  padding: 10px;
+  font-size: 20px;
+}
+  .contenttasks {
+    width: 100%;
+    height: 100vh; /* Occupies full height of the screen */
+    padding: 0;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevents horizontal overflow */
+  }
   html,
   body {
     overflow-x: hidden;
+      width: 100%;
+      height: 100%;
+      margin: 0; /* Reset margin to ensure full width */
+      overflow-x: hidden; /* Prevent horizontal scrolling */
   }
   .box {
     height: 100%;
@@ -403,6 +503,7 @@ footer {
     height: 100%;
     width: 100%;
     margin: 0px;
+    padding: 0;
     flex-direction: column;
   }
   #forgotpasword {
@@ -425,4 +526,5 @@ footer {
     margin-bottom: 10px;
     font-size: 15px;
   }
+ 
 }

@@ -68,10 +68,10 @@ function addTaskToTable(description, date) {
     var tableBody = document.getElementById('taskTableBody');
     var newRow = tableBody.insertRow();
     newRow.innerHTML = `
-        <td>${description}</td>
-        <td>${date}</td>
-        <td><input type="checkbox" onclick="completeTask(this)"></td>
-        <td><button onclick="edittaskopen(this)"><i class='fas fa-edit'></i></button></td>
+        <td data-label="Tarefa">${description}</td>
+        <td data-label="Data">${date}</td>
+        <td data-label="Estado"><input type="checkbox" onclick="completeTask(this)"></td>
+        <td data-label="Editar"><button onclick="edittaskopen(this)"><i class='fas fa-edit'></i></button></td>
     `;
 }
 
