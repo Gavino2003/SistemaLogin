@@ -10,6 +10,13 @@ function createtaskclose() {
     createtaskmenu.style.display = 'none';
 }
 
+function edittaskclose() {
+    edittaskmenu.style.display = 'none';
+}
+
+/*Apartir daqui usei chat-gpt*/
+
+
 function edittaskopen(button) {
     editedRow = button.parentNode.parentNode;
     const columns = editedRow.getElementsByTagName('td');
@@ -21,10 +28,6 @@ function edittaskopen(button) {
         dateInput.value = columns[1].innerText;
         edittaskmenu.style.display = 'block';
     }
-}
-
-function edittaskclose() {
-    edittaskmenu.style.display = 'none';
 }
 
 document.getElementById('taskForm').addEventListener('submit', function (event) {

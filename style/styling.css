@@ -74,9 +74,19 @@ input:focus:invalid {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
-  padding: 100px;
+  padding: 50%;
 }
 .box2 {
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 50px;
+  margin: 20px;
+}
+.box3 {
   border: 0px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527),
@@ -94,7 +104,7 @@ input:focus:invalid {
 
 .logoconteiner {
   position: relative;
-  width: 130px; /* Ajuste conforme necessário */
+  width: 130px; 
   height: auto;
   margin: 0 auto;
   cursor: pointer;
@@ -111,34 +121,36 @@ input:focus:invalid {
   color: black;
   font-size: 20px;
   display: flex;
-  justify-content: center; /* Centralizar horizontalmente */
-  align-items: center; /* Centralizar verticalmente */
-  opacity: 0; /* Começa invisível */
-  transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+  justify-content: center; 
+  align-items: center; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
 }
 
 .logoconteiner:hover .overlay {
-  opacity: 1; /* Torna o texto visível ao passar o mouse sobre o contêiner */
+  opacity: 1; 
 }
 
 .logoconteiner img {
-  width: 100%; /* Garante que a imagem ocupe todo o espaço disponível */
-  height: auto; /* Mantém a proporção original da imagem */
-  transition: filter 0.3s ease; /* Adiciona uma transição suave para o efeito de escala de cinza */
+  width: 100%; 
+  height: auto; 
+  transition: filter 0.3s ease; 
 }
 
 .logoconteiner:hover img {
-  filter: grayscale(100%); /* Remove o efeito de escala de cinza ao passar o mouse sobre o contêiner */
+  filter: grayscale(100%); 
 }
 #profilepicture{
   width: 200px;
   height: auto;
   margin-right: 30px;
 }
-#profpicedit{
-  width: 200px;
+#profpicedit {
+  max-width: 200px;
+  width: 60%;
   height: auto;
-
+  padding: 0;
+  margin: 0;
 }
 .userinfo{
   display: flex;
@@ -370,7 +382,7 @@ footer {
   color: white;
   margin-bottom: 10px;
 }
-/* Esconder a checkbox que o browser tem por default */
+
 .boxcheckbox input {
   position: absolute;
   opacity: 0;
@@ -378,7 +390,7 @@ footer {
   height: 0;
   width: 0;
 }
-/* Criar a checkbox customizada */
+
 .checkmark {
   position: absolute;
   top: 0;
@@ -389,25 +401,25 @@ footer {
   border: 2px solid white;
   border-radius: 5px;
 }
-/* O que fazer ao passar o rato em cima */
+
 .boxcheckbox:hover input ~ .checkmark {
   background-color: #050505;
 }
-/* Quando clicada modificar o fundo*/
+
 .boxcheckbox input:checked ~ .checkmark {
   background-color: #000000;
 }
-/* Criar o checkmark*/
+
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-/* Mostar o chekmark*/
+
 .boxcheckbox input:checked ~ .checkmark:after {
   display: block;
 }
-/* Customizar o checkmark*/
+
 .boxcheckbox .checkmark:after {
   left: 6px;
   top: 2px;
@@ -451,7 +463,10 @@ thead th {
     width: 95%;
     height: 80%;
   }
-
+  .logininputs{
+    width: 50%;
+    max-width: 300px;
+  }
   #sessionconfig {
     width: 100%;
     display: flex;
@@ -462,12 +477,12 @@ thead th {
   #createtaskdiv {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centralizar verticalmente */
-    align-items: center; /* Centralizar horizontalmente */
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
   }
 
-  /* Styling for user image */
+  
   #profilepicture {
     display: block;
     margin: 0 auto;
@@ -478,19 +493,19 @@ thead th {
     display: flex;
     justify-content: center;
   }
-  /* Styling for username text */
+  
   #usernametext, #handicon, table thead tr{
     display: none;
   }
  
 
   #mytasks {
-    font-size: 3rem; /* Tamanho de fonte aumentado */
+    font-size: 3rem; 
     margin: 0px;
   }
   
   #buttontask {
-    margin-top: 15px; /* Ajustar o espaçamento entre o texto e o botão */
+    margin-top: 15px; 
   }
   table {
     width: 100%;
@@ -520,30 +535,39 @@ thead th {
     float: left;
   }
  #tables_tasks {
-  margin: 5rem auto; /* Margem superior de 5rem e margens laterais automáticas para centralizar */
-  width: 80%; /* Largura da tabela */
+  margin: 5rem auto; 
+  width: 80%; 
   font-size: 20px;
 }
   .contenttasks {
     width: 100%;
-    height: 100vh; /* Occupies full height of the screen */
+    height: 100vh; 
     padding: 0;
     flex-direction: column;
-    overflow-x: hidden; /* Prevents horizontal overflow */
+    overflow-x: hidden; 
   }
   html,
   body {
       overflow-x: hidden;
       width: 100%;
       height: 100%;
-      margin: 0; /* Reset margin to ensure full width */
-      overflow-x: hidden; /* Prevent horizontal scrolling */
+      margin: 0; 
+      overflow-x: hidden; 
   }
   .box {
     height: 100%;
     width: 100%;
   }
   .box2 {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    flex-direction: column;
+  }
+  .box3{
     height: 100%;
     width: 100%;
     margin: 0px;
