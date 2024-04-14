@@ -36,7 +36,7 @@ SwipeHire é um sistema de login simples desenvolvido apenas com HTML, CSS e Jav
 ## Funcionalidades JavaScript
 
 - **Gerenciamento de Tarefas**
-  - `tasks.js`: JavaScript adicionado para possibilitar a criação, edição e marcação de tarefas como concluídas na página de tarefas.
+  - `myjavacript.js`: JavaScript adicionado para possibilitar a criação, edição e marcação de tarefas como concluídas na página de tarefas.
 
 ---
 
