@@ -1,48 +1,48 @@
 # SwipeHire
 
-SwipeHire é um sistema de login simples desenvolvido apenas com HTML, CSS e JavaScript. Ele oferece funcionalidades básicas de login, registro, recuperação de senha e agora inclui uma página para editar o perfil do usuário, bem como uma funcionalidade para criar, editar e marcar tarefas como concluídas.
+SwipeHire é um sistema de login simples desenvolvido apenas com HTML, CSS e JavaScript. Oferece funcionalidades básicas de login, registo, recuperação de senha e agora inclui uma página para editar o perfil do utilizador, bem como uma funcionalidade para criar, editar e marcar tarefas como concluídas.
 
 ---
 
 ## Páginas
 
 ### Página Principal
-- `index.html`: Esta é a página principal do site. Contém um logotipo e botões de login, registro e recuperação de senha.
+- `index.html`: Esta é a página principal do site. Contém um logótipo e botões de login, registo e recuperação de senha.
 
 ### Página de Login
-- `login.html`: Permite que os usuários façam login em suas contas. Eles podem inserir o email e a senha para acessar a plataforma.
+- `login.html`: Permite que os utilizadores façam login nas suas contas. Podem inserir o email e a senha para aceder à plataforma.
 
-### Página de Registro
-- `register.html`: Nesta página, os usuários podem se registrar para criar uma nova conta. Eles precisam inserir seu nome, email e senha, e concordar com os termos de uso.
+### Página de Registo
+- `register.html`: Os utilizadores podem registar-se para criar uma nova conta. Precisam de inserir o seu nome, email e senha, e concordar com os termos de utilização.
 
 ### Página de Recuperação de Senha
-- `recoverpassword.html`: Aqui os usuários podem solicitar uma nova senha. Eles precisam fornecer seu email e clicar em um botão para receberem as instruções de recuperação no email.
+- `recoverpassword.html`: Aqui os utilizadores podem solicitar uma nova senha. Precisam fornecer o seu email e clicar num botão para receberem as instruções de recuperação no email.
 
 ### Página de Edição de Perfil
-- `editprofile.html`: Permite que os usuários editem seu perfil. Eles podem atualizar suas informações, como nome, email e senha.
+- `editprofile.html`: Permite que os utilizadores editem o seu perfil. Podem atualizar as suas informações, como nome, email e senha.
 
 ### Página de Tarefas
-- `tasks.html`: Nova página que permite aos usuários criar, editar e marcar tarefas como concluídas. As tarefas são gerenciadas dinamicamente usando JavaScript.
+- `tasks.html`: Nova página que permite aos utilizadores criar, editar e marcar tarefas como concluídas. As tarefas são geridas dinamicamente usando JavaScript.
 
 ---
 
 ## Estilo CSS
 
 - **Estilos CSS**
-  - `styling.css`: Este arquivo contém estilos CSS para todas as páginas do site. Ele define a aparência e o layout dos elementos HTML.
+  - `styling.css`: Este ficheiro contém estilos CSS para todas as páginas do site. Define a aparência e o layout dos elementos HTML.
 
 ---
 
 ## Funcionalidades JavaScript
 
-- **Gerenciamento de Tarefas**
+- **Gestão de Tarefas**
   - `myjavacript.js`: JavaScript adicionado para possibilitar a criação, edição e marcação de tarefas como concluídas na página de tarefas.
 
 ---
 
 ## Como Executar
 
-Basta abrir qualquer um dos arquivos HTML em um navegador para visualizar o site. Não é necessário nenhum servidor backend.
+Basta abrir qualquer um dos ficheiros HTML num navegador para visualizar o site. Não é necessário nenhum servidor backend.
 
 ---
 
@@ -58,6 +58,6 @@ Este projeto foi desenvolvido por Vasco Gavino em 2024.
 
 ---
 
-## Direitos Autorais
+## Direitos de Autor
 
 © 2024 Vasco Gavino. Todos os direitos reservados.
