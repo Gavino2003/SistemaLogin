@@ -1,25 +1,25 @@
 # SwipeHire
 
-SwipeHire é um sistema de login simples desenvolvido apenas com HTML, CSS e JavaScript. Oferece funcionalidades básicas de login, registo, recuperação de senha e agora inclui uma página para editar o perfil do utilizador, bem como uma funcionalidade para criar, editar e marcar tarefas como concluídas.
+SwipeHire é um sistema de login simples desenvolvido apenas com HTML, CSS e JavaScript. Oferece funcionalidades básicas de login, registo, recuperação de palavra-passe e agora inclui uma página para editar o perfil do utilizador, bem como uma funcionalidade para criar, editar e marcar tarefas como concluídas.
 
 ---
 
 ## Páginas
 
 ### Página Principal
-- `index.html`: Esta é a página principal do site. Contém um logótipo e botões de login, registo e recuperação de senha.
+- `index.html`: Esta é a página principal do site. Contém um logótipo e botões de login, registo e recuperação de palavra-passe.
 
 ### Página de Login
-- `login.html`: Permite que os utilizadores façam login nas suas contas. Podem inserir o email e a senha para aceder à plataforma.
+- `login.html`: Permite que os utilizadores façam login nas suas contas. Podem inserir o email e a password para aceder à plataforma.
 
 ### Página de Registo
-- `register.html`: Os utilizadores podem registar-se para criar uma nova conta. Precisam de inserir o seu nome, email e senha, e concordar com os termos de utilização.
+- `register.html`: Os utilizadores podem registar-se para criar uma nova conta. Precisam de inserir o seu nome, email e password, e concordar com os termos de utilização.
 
-### Página de Recuperação de Senha
-- `recoverpassword.html`: Aqui os utilizadores podem solicitar uma nova senha. Precisam fornecer o seu email e clicar num botão para receberem as instruções de recuperação no email.
+### Página de Recuperação de Password
+- `recoverpassword.html`: Aqui os utilizadores podem solicitar uma nova password. Precisam fornecer o seu email e clicar num botão para receberem as instruções de recuperação no email.
 
 ### Página de Edição de Perfil
-- `editprofile.html`: Permite que os utilizadores editem o seu perfil. Podem atualizar as suas informações, como nome, email e senha.
+- `editprofile.html`: Permite que os utilizadores editem o seu perfil. Podem atualizar as suas informações, como nome, email e password.
 
 ### Página de Tarefas
 - `tasks.html`: Nova página que permite aos utilizadores criar, editar e marcar tarefas como concluídas. As tarefas são geridas dinamicamente usando JavaScript.
@@ -36,7 +36,7 @@ SwipeHire é um sistema de login simples desenvolvido apenas com HTML, CSS e Jav
 ## Funcionalidades JavaScript
 
 - **Gestão de Tarefas**
-  - `myjavacript.js`: JavaScript adicionado para possibilitar a criação, edição e marcação de tarefas como concluídas na página de tarefas.
+  - `myjavascript.js`: JavaScript adicionado para possibilitar a criação, edição e marcação de tarefas como concluídas na página de tarefas.
 
 ---
 
